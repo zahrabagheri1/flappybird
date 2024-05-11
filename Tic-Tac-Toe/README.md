@@ -1,4 +1,5 @@
 # tic-tac-toe (XO)
+
 - It is a game for two players.
 - It is usually played on a 3x3 board, but it can be wider.
 - The player who started first fills in the empty squares by typing ‘X’ and the other player ‘O’.
@@ -10,8 +11,18 @@
 
 ![alt text](XOTIED.png)
 
-| Win mode | The number of win mode |
-| -------- | ---------------------- |
-| A Line   | XXX - OOO  3 mode      |
-| A Column | XXX - OOO  3 mode      |
-| A Cross  | XXX - OOO  2 mode      |
+# the number of win mode
+
+- If we want to take a line, the numbers must be consecutive
+- If we want to check a column, the numbers must be together up to a distance of 3
+- If we want to cross check, the numbers must be even
+
+| Win mode   | The number of win mode |
+| ---------- | ---------------------- |
+| A Row      | XXX - OOO 3 mode       |
+| A Column   | XXX - OOO 3 mode       |
+| A Diagonal | XXX - OOO 2 mode       |
+
+| 0 | 1 | 2 |
+| 3 | 4 | 5 |
+| 6 | 7 | 8 |
