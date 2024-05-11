@@ -3,6 +3,7 @@ import "./App.css";
 import Board from "./Components/Board";
 import Gameover from "./Components/Gameover";
 import GameState from "./Data/GameState";
+import Reset from "./Components/Reset";
 
 const playerX = "X";
 const playerO = "O";
@@ -63,6 +64,7 @@ function App() {
     if (gameState !== GameState.inProgress) {
       return;
     }
+
     if (tiles[index] !== null) {
       return;
     }
@@ -75,6 +77,14 @@ function App() {
       setPlayerTurn(playerX);
     }
   };
+
+  const handleReset = () => {
+    setGameState(GameState.inProgress);
+    setTiles(Array(9).fill(null));
+    setPlayerTurn(playerX);
+    setStrikeLine(null);
+  };
+
   useEffect(() => {
     checkWinner(tiles, setStrikeLine, setGameState);
   }, [tiles]);
@@ -90,6 +100,7 @@ function App() {
       />
 
       <Gameover gameState={gameState} />
+      <Reset gameState={gameState} onReset={handleReset} />
     </div>
   );
 }

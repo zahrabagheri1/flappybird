@@ -54,7 +54,6 @@ h1 {
   opacity: 0.4;
 }
 
-
 .strike {
   position: absolute;
   border-radius: 2px;
@@ -109,11 +108,20 @@ h1 {
 .game-over {
   text-align: center;
   border: 8px ridge #5468ff;
-  border-radius: 20px 80px ;
+  border-radius: 20px 80px;
   background-color: #24245491;
   padding: 10px;
   width: 80%;
   margin: auto;
   margin-top: 50px;
+  font-size: 1.5em;
+}
+
+.reset-button {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #0074a6;
+  color: white;
+  width: 100%;
   font-size: 1.5em;
 }
