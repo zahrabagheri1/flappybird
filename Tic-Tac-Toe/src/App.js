@@ -4,9 +4,17 @@ import Board from "./Components/Board";
 import Gameover from "./Components/Gameover";
 import GameState from "./Data/GameState";
 import Reset from "./Components/Reset";
+import gameoversoundAsset from "./Assets/sounds/game-over.wav";
+import clicksoundAsset from "./Assets/sounds/click.wav";
+
+const gameOverSound = new Audio(gameoversoundAsset);
+gameOverSound.volume = 0.2;
+const clickSound = new Audio(clicksoundAsset);
+clickSound.volume = 0.5;
 
 const playerX = "X";
 const playerO = "O";
+
 const winnerCombinations = [
   // * Rows
   { combo: [0, 1, 2], strike: "strike-row-1" },
@@ -88,6 +96,18 @@ function App() {
   useEffect(() => {
     checkWinner(tiles, setStrikeLine, setGameState);
   }, [tiles]);
+
+  useEffect(() => {
+    if (tiles.some((tile) => tile !== null)) {
+      clickSound.play();
+    }
+  }, [tiles]);
+
+  useEffect(() => {
+    if (gameState !== GameState.inProgress) {
+      gameOverSound.play();
+    }
+  }, [gameState]);
 
   return (
     <div className="tictactoe">
