@@ -2,27 +2,27 @@ import React from "react";
 import Tile from "./Tile";
 import Strike from "./Strike";
 
-function Board(props) {
+function Board({tiles, playerTurn, strikeLine ,onTileClick}) {
   const handleClick = (e) => {
-    props.onTileClick(e);
+    onTileClick(e);
   };
   return (
     <div className="board">
       {[...Array(9)].map((tile, index) => (
         <Tile
-          bottomBorder={
-            index === 6 || index === 7 || index === 8 ? null : "bottom-border"
+          topBorder={
+            index === 0 || index === 1 || index === 2 ? "top-border" : null
           }
-          rightBorder={
-            index === 2 || index === 5 || index === 8 ? null : "right-border"
+          leftBorder={
+            index === 0 || index === 3 || index === 6 ? "left-border" : null
           }
-          value={props.tiles[index]}
+          value={tiles[index]}
           onClick={() => handleClick(index)}
-          playerTurn={props.playerTurn}
+          playerTurn={playerTurn}
         />
       ))}
 
-      <Strike />
+      <Strike strikeLine={strikeLine}/>
     </div>
   );
 }

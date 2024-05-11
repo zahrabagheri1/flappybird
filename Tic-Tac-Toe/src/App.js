@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Board from "./Components/Board";
 
@@ -8,6 +8,7 @@ const playerO = "O";
 function App() {
   const [tiles, setTiles] = useState(Array(9).fill(null));
   const [playerTurn, setPlayerTurn] = useState(playerX);
+  const [strikeLine, setStrikeLine] = useState();
 
   const handleTileClick = (index) => {
     if (tiles[index] !== null) {
@@ -25,8 +26,13 @@ function App() {
 
   return (
     <div className="tictactoe">
-      <h1>Tic Tac Toe</h1>
-      <Board tiles={tiles} playerTurn={playerTurn} onTileClick={handleTileClick} />
+      <h1>~ Tic Tac Toe ~</h1>
+      <Board
+        tiles={tiles}
+        playerTurn={playerTurn}
+        onTileClick={handleTileClick}
+        strikeLine={strikeLine}
+      />
     </div>
   );
 }

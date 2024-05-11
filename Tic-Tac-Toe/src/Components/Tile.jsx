@@ -1,16 +1,16 @@
 import React from "react";
 
-function Tile(props) {
+function Tile({value, playerTurn, onClick, leftBorder,topBorder}) {
   let hoverClass = null;
-  if (props.value === null && props.playerTurn !== null) {
-    hoverClass = `${props.playerTurn.toLowerCase()}-hover`;
+  if (value === null && playerTurn !== null) {
+    hoverClass = `${playerTurn.toLowerCase()}-hover`;
   }
   return (
     <div
-      onClick={props.onClick}
-      className={`tile ${props.rightBorder} ${props.bottomBorder} ${hoverClass}`}
+      onClick={onClick}
+      className={`tile right-border bottom-border ${leftBorder} ${topBorder} ${hoverClass}`}
     >
-      {props.value}
+      {value}
     </div>
   );
 }

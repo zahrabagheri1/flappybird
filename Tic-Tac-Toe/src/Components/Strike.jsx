@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Strike() {
+function Strike({strikeLine}) {
+  let strikeClass = null;
+  
   return (
-    <div>Strike</div>
+    <div className={`strike ${strikeClass}`}></div>
   )
 }
 
