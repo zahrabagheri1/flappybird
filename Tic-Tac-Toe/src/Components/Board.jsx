@@ -17,7 +17,8 @@ function Board(props) {
             index === 2 || index === 5 || index === 8 ? null : "right-border"
           }
           value={props.tiles[index]}
-          onClick={()=>handleClick(index)}
+          onClick={() => handleClick(index)}
+          playerTurn={props.playerTurn}
         />
       ))}
 
