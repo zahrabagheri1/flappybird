@@ -13,9 +13,9 @@
 
 # the number of win mode
 
-- If we want to take a line, the numbers must be consecutive
+- If we want to take a row, the numbers must be consecutive
 - If we want to check a column, the numbers must be together up to a distance of 3
-- If we want to cross check, the numbers must be even
+- If we want to diagonal check, the numbers must be even
 
 | Win mode   | The number of win mode |
 | ---------- | ---------------------- |
@@ -23,7 +23,13 @@
 | A Column   | XXX - OOO 3 mode       |
 | A Diagonal | XXX - OOO 2 mode       |
 
+# Board of XO 
+- A Row win => 0-1-2 OR 3-4-5 OR 7-8-9
+- A Column win => 0-3-6 OR 1-4-7 OR 2-5-8
+- A Diagonal win => 0-4-8 OR 2-4-6
+
 | 0 | 1 | 2 |
 | - | - | - |
 | 3 | 4 | 5 |
+| - | - | - |
 | 6 | 7 | 8 |
