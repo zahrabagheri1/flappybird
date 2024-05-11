@@ -32,3 +32,32 @@
 | - | - | - |
 | 3 | 4 | 5 |
 | 6 | 7 | 8 |
+
+
+# The overall picture:
+
+![alt text](./src/Assets/imgs/image.png)
+
+# Technologies Used:
+
+- Java Script
+- CSS
+- React
+
+### Cloning the repository
+
+```shell
+git clone https://github.com/zahrabagheri1/autocomplete-select-box.git
+```
+
+### Install packages
+
+```shell
+npm i
+```
+
+### Start the app
+
+```shell
+npm run dev
+```
