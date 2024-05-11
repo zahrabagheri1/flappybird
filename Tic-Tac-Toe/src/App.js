@@ -112,6 +112,9 @@ function App() {
   return (
     <div className="tictactoe">
       <h1>~ Tic Tac Toe ~</h1>
+      
+      <Gameover gameState={gameState} />
+
       <Board
         tiles={tiles}
         playerTurn={playerTurn}
@@ -119,7 +122,6 @@ function App() {
         strikeLine={strikeLine}
       />
 
-      <Gameover gameState={gameState} />
       <Reset gameState={gameState} onReset={handleReset} />
     </div>
   );
