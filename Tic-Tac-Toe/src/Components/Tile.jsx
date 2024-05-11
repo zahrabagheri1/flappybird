@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-function Tile() {
+function Tile(props) {
   return (
-    <div className='tile'>X</div>
-  )
+    <div className={`tile ${props.rightBorder} ${props.bottomBorder}`}>X</div>
+  );
 }
 
-export default Tile
+export default Tile;
