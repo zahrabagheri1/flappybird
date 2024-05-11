@@ -22,7 +22,7 @@ function Board({tiles, playerTurn, strikeLine ,onTileClick}) {
         />
       ))}
 
-      <Strike strikeLine={strikeLine}/>
+      <Strike strikeClass={strikeLine}/>
     </div>
   );
 }
