@@ -18,6 +18,8 @@ window.onload = function () {
   //1/10th of a second
   window.setInterval(function () {
     crushCandy();
+    slideCandy();
+    generateNewCandy();
   }, 100);
 };
 
@@ -111,6 +113,7 @@ function crushCandy() {
   // crushFive()
   // crushFoure()
   crushThree();
+  document.getElementById("score").innerText = score;
 }
 
 function crushThree() {
@@ -129,6 +132,7 @@ function crushThree() {
         candyOne.src = "./images/blank.png";
         candyTwo.src = "./images/blank.png";
         candyThree.src = "./images/blank.png";
+        score += 30;
       }
     }
   }
@@ -148,6 +152,7 @@ function crushThree() {
         candyOne.src = "./images/blank.png";
         candyTwo.src = "./images/blank.png";
         candyThree.src = "./images/blank.png";
+        score += 30;
       }
     }
   }
@@ -195,9 +200,21 @@ function slideCandy() {
     let ind = rows - 1;
     for (let row = columns - 1; row >= 0; row--) {
       if (!board[row][colunm].src.includes("blank")) {
-        board[ind][colunm].src = board[row][colunm];
+        board[ind][colunm].src = board[row][colunm].src;
         ind -= 1;
       }
+    }
+
+    for (let row = ind; row >= 0; row--) {
+      board[row][colunm].src = "./images/blank.png";
+    }
+  }
+}
+
+function generateNewCandy(params) {
+  for (let colunm = 0; colunm < columns; colunm++) {
+    if (board[0][colunm].src.includes("blank")) {
+      board[0][colunm].src = "./images/" + randomCandy() + ".png";
     }
   }
 }
