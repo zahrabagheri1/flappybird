@@ -15,12 +15,13 @@ moveSound.volume = 0.5;
 
 window.onload = function () {
   startGame();
+
   //1/10th of a second
   window.setInterval(function () {
     crushCandy();
     slideCandy();
     generateNewCandy();
-  }, 100);
+  }, 200);
 };
 
 function randomCandy() {
@@ -28,7 +29,6 @@ function randomCandy() {
 }
 
 function startGame() {
-  //   loadGame.play();
   for (let r = 0; r < rows; r++) {
     let row = [];
     for (let c = 0; c < columns; c++) {
@@ -211,7 +211,7 @@ function slideCandy() {
   }
 }
 
-function generateNewCandy(params) {
+function generateNewCandy() {
   for (let colunm = 0; colunm < columns; colunm++) {
     if (board[0][colunm].src.includes("blank")) {
       board[0][colunm].src = "./images/" + randomCandy() + ".png";

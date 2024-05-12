@@ -1,23 +1,54 @@
-body{
-    background: url("./background.jpg") no-repeat center center fixed;
-    background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("./background.gif") no-repeat center center fixed;
+  background-size: cover;
+  font-family: fantasy;
+  color: rgb(0, 0, 0);
+  padding-top: 4vh;
+  margin: auto;
+  width: 90%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 14vh;
+}
+
+.crush-name {
+    color: rgb(22, 71, 7);
+    font-size: 38px;
     text-align: center;
 }
 
-#board{
-    width: 450px;
-    height: 450px;
-    background-color: lightblue;
-    border: 5px solid slategray;
-    border-radius: 10px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+.crush-score,
+.crush-move {
+  font-family: monospace;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-#board img{
-    width: 50px;
-    height: 50px;
+.candy-crush {
+  text-align: center;
+}
+
+#board {
+  width: 450px;
+  height: 450px;
+  background-color: lightblue;
+  border: 5px solid slategray;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#board img {
+  width: 50px;
+  height: 50px;
 }
