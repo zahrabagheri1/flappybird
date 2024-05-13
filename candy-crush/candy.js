@@ -8,9 +8,9 @@ let score = 0;
 var currTile;
 var otherTile;
 
-let loadGame = new Audio("./sounds/loadGame.wav");
-let notmoveSound = new Audio("./sounds/notmovesound.wav");
-let moveSound = new Audio("./sounds/movesound.wav");
+let loadGame = new Audio("./Assets/sounds/loadGame.wav");
+let notmoveSound = new Audio("./Assets/sounds/notmovesound.wav");
+let moveSound = new Audio("./Assets/sounds/movesound.wav");
 moveSound.volume = 0.5;
 
 window.onload = function () {
@@ -35,7 +35,7 @@ function startGame() {
       // * <img id="0-0" src="./images/Red.png">
       let tile = document.createElement("img");
       tile.id = r.toString() + "-" + c.toString();
-      tile.src = "./images/" + randomCandy() + ".png";
+      tile.src = "./Assets/images/" + randomCandy() + ".png";
 
       // * Drag Functionality
       tile.addEventListener("dragstart", dragStart); //? Click on a candy, initialize drag process
@@ -129,9 +129,9 @@ function crushThree() {
         candyTwo.src == candyThree.src &&
         !candyOne.src.includes("blank")
       ) {
-        candyOne.src = "./images/blank.png";
-        candyTwo.src = "./images/blank.png";
-        candyThree.src = "./images/blank.png";
+        candyOne.src = "./Assets/images/blank.png";
+        candyTwo.src = "./Assets/images/blank.png";
+        candyThree.src = "./Assets/images/blank.png";
         score += 30;
       }
     }
@@ -149,9 +149,9 @@ function crushThree() {
         candyTwo.src == candyThree.src &&
         !candyOne.src.includes("blank")
       ) {
-        candyOne.src = "./images/blank.png";
-        candyTwo.src = "./images/blank.png";
-        candyThree.src = "./images/blank.png";
+        candyOne.src = "./Assets/images/blank.png";
+        candyTwo.src = "./Assets/images/blank.png";
+        candyThree.src = "./Assets/images/blank.png";
         score += 30;
       }
     }
@@ -206,7 +206,7 @@ function slideCandy() {
     }
 
     for (let row = ind; row >= 0; row--) {
-      board[row][colunm].src = "./images/blank.png";
+      board[row][colunm].src = "./Assets/images/blank.png";
     }
   }
 }
@@ -214,7 +214,7 @@ function slideCandy() {
 function generateNewCandy() {
   for (let colunm = 0; colunm < columns; colunm++) {
     if (board[0][colunm].src.includes("blank")) {
-      board[0][colunm].src = "./images/" + randomCandy() + ".png";
+      board[0][colunm].src = "./Assets/images/" + randomCandy() + ".png";
     }
   }
 }
