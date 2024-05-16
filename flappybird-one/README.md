@@ -4,8 +4,9 @@ flappy bird with html css and javascript....
 
 # Purview of project
 
-<video controls autoplay src="./Assets/video/flappybird.mp4" title="Title"></video>
 <video controls src="Assets/video/flappybird.mp4" width="320" height="240" title="Title"></video>
+![alt text](<yOOJ4Bs_gif (400×200).gif>)
+
 # 1.Overview
 We try to bring the popular game Flappy Bird, which is originally on WEB platform.
 The game is a side-scroller where the player controls a bird, attempting to fly between rows of green pipes without coming into contact them. If the player touches the pipes, it ends the game. The bird briefly flaps upward each time the player taps the screen; if the is not tapped, the bird falls due to gravity.
