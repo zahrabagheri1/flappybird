@@ -4,7 +4,7 @@ flappy bird with html css and javascript....
 
 # Purview of project
 
-<video controls src="./Assets/video/flappybird.mp4" title="Title"></video>
+<video controls autoplay src="./Assets/video/flappybird.mp4" title="Title"></video>
 
 # 1.Overview
 We try to bring the popular game Flappy Bird, which is originally on WEB platform.
